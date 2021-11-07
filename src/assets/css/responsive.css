@@ -1,0 +1,84 @@
+@media (max-width: 1024px) {
+    .video {
+        width: 450px;
+    }
+    .form_donate {
+        width: 65%;
+    }
+}
+@media (max-width: 768px) {
+    .content_vid {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .button_yellow {
+        display: flex;
+        justify-content: center;
+    }
+    .navbar {
+        position: absolute;
+        background: #800080;
+        text-align: center;
+        z-index: 3;
+        right: 0;
+    }
+    .navbar-light .navbar-nav .nav-link {
+        text-align: center;
+        font-size: 15px;
+    }
+    .navbar-nav {
+        line-height: 2;
+    }
+    .video_div {
+        display: flex;
+        justify-content: center;
+    }
+    .banner_main_about {
+        background-position: center;
+    }
+    .mlr {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .form_donate {
+        width: 90%;
+    }
+}
+@media (max-width: 500px) {
+    .navbar {
+        right: 0;
+        top: 40px;
+    }
+    .video {
+        width: 400px;
+    }
+    .banner_text {
+        left: 30px;
+    }
+    .banner_text p {
+        font-size: 25px;
+    }
+    .donation_title {
+        font-size: 30px;
+    }
+    .form_donate form input {
+        width: 325px;
+    }
+}
+@media (max-width: 400px) {
+    .video {
+        width: 350px;
+    }
+    .form_donate form input {
+        width: 300px;
+    }
+}
+@media (max-width: 350px) {
+    .video {
+        width: 300px;
+    }
+    .form_donate form input {
+        width: 250px;
+    }
+}

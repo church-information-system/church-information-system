@@ -1,0 +1,586 @@
+@font-face {
+    font-family: "POppins";
+    src: url("./../fonts/Poppins-Light.ttf");
+    src: url("./../fonts/Poppins-Medium.ttf");
+}
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins";
+    color: #3d3d3d;
+    background: #EAEAEA;
+}
+
+.mlr {
+    margin-left: 60px !important;
+    margin-right: 60px !important;
+}
+header {
+    background: #4C004A;
+    padding: 10px 0;
+    /* position: absolute;
+    top: 0;
+    width: 95%; */
+}
+.margin {
+    margin: 0;
+}
+.padding{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.header {
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+}
+.logo_size {
+    width: 90px;
+    border-radius: 10px;
+}
+.logo_div {
+    width: 20%;
+    z-index: 2;
+}
+.navBar {
+    width: 80%;
+    z-index: 2;
+}
+.navbar-nav {
+    line-height: 3;
+}
+.navbar {
+    float: right;
+}
+.navBar .navbar-nav a {
+    color: #fefefe;
+    text-align: right;
+    text-decoration: none;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    font-size: 18px;
+    font-family: Century Gothic, Arial, Tahoma, Serif;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #ffffff;
+}
+.navbar-light .navbar-nav .nav-link.active {
+    color: #ffffff;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #ffcd43;
+    font-weight: 600;
+}
+.banner_main {
+    width: 100%;
+    height: 655px;
+    background-image: url(./../images/pic1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    position: relative;
+}
+.overlay {
+    width: 100%;
+    height: 655px;
+    background-color: rgba(135, 85, 134, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.banner_text {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(4px);
+    z-index: 2;
+    color: #ffffff;
+    font-family: "Dancing Script";
+    font-size: 40px;
+    width: fit-content;
+    padding: 25px;
+    position: absolute;
+    top: 245px;
+    left: 50px;
+}
+.banner_btn {
+    position: absolute;
+    z-index: 2;
+    top: 480px;
+    left: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 335px;
+}
+.mass_sched {
+    background: #ffcd43;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.button_yellow {
+    margin-top: 20px;
+}
+.yellow_btn {
+    background: #ffcd43;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.cont_title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333333;
+    width: 80%;
+}
+.cont_par p {
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 80%;
+}
+.home_content {
+    margin-bottom: 50px;
+    background: #4C004A;
+}
+.tag_line{
+    font-size: 40px;
+    font-family: "Dancing Script";
+    text-align: center;
+}
+.verse {
+    font-family: "Roboto";
+    font-size: 25px;
+    text-align: center;
+}
+.bible_verse{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.content_vid{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 0 30px;
+}
+.video_div, .button_yellow{
+    display: flex;
+    justify-content: center;
+}
+.post_header{
+    color: #333333;
+}
+.posts_card{
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
+    color: #333333!important;
+    width: 60%;
+}
+.flex-space{
+    display: flex;
+    justify-content: space-between;
+}
+/* ABOUT US CSS */
+.nav_btn .mass_sched {
+    font-size: 14px;
+}
+.banner_main_about {
+    width: 100%;
+    height: 655px;
+    background-image: url(./../images/canonical.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    position: relative;
+}
+.about_title h2 {
+    position: absolute;
+    color: #ffffff;
+    z-index: 2;
+    font-weight: 700;
+    bottom: 85px;
+    left: 47%;
+}
+.cont_about p {
+    text-align: center;
+    text-align: 16px;
+}
+.about_title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+.about_content {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.prayer_subtitle {
+    font-weight: 600;
+    font-size: 17px;
+}
+.cont_prayer p {
+    text-align: justify;
+}
+.prayer_img_div {
+    display: flex;
+    justify-content: center;
+}
+.prayer_img {
+    width: 300px;
+    border-radius: 5px;
+}
+
+/* events and mass schedule */
+.schedule_main {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+.mass_sched_div {
+    width: 80%;
+    background: rgb(175, 150, 216);
+    background: linear-gradient(180deg, rgba(175, 150, 216, 1) 0%, rgba(114, 74, 189, 1) 67%);
+    padding: 30px;
+}
+.card {
+    background: none;
+    color: #ffffff;
+}
+.list-group-item {
+    background: none;
+    color: #ffffff;
+    border: none;
+}
+.live_icon img {
+    width: 80px;
+}
+.card-header span {
+    font-size: 18px;
+    font-weight: 550;
+}
+.time {
+    display: flex;
+    justify-content: center;
+}
+.time span {
+    width: 50%;
+    text-align: center;
+}
+.carousel-inner {
+    width: 90%;
+    margin: 0 auto;
+}
+.carousel-control-next,
+.carousel-control-prev {
+    top: 170px;
+}
+/* IMAGE GALLERY */
+.lightgallery_main {
+    width: 80%;
+    margin: 0 auto;
+}
+.image_gallery img {
+    width: 100%;
+    border-radius: 5px;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+.center_flex {
+    display: flex;
+    justify-content: center;
+}
+
+/* VIRRTUAL TOUR */
+.page_title {
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    color: #361d85;
+}
+.virtualtour {
+    width: 80%;
+    padding-left: 60px;
+    margin: 0 auto;
+}
+.virtual_desc {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.img_item {
+    min-width: 19%;
+    max-width: 19%;
+    min-height: 200px;
+    max-height: 200px;
+}
+.images_row{
+    display: flex;
+    justify-content: space-between;
+}
+.img_item img{
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: cover;
+    background-position-y: center;
+}
+
+
+/*HOVER*/
+.carousel-control-prev,
+.carousel-control-next {
+    color: #3d3d3d;
+    background: #ffcd43;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.carousel-control-prev:hover {
+    color: #3d3d3d;
+}
+.search_bg {
+    color: #0a0a0a;
+    background-color: #ffcd43;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    padding: 0.5rem;
+}
+.image {
+    position: relative;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+.image__overlay--primary {
+    background: #000;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+/* DONATE ICON */
+.donate_icon {
+    position: absolute;
+    right: 0;
+    position: fixed;
+    top: 50%;
+    z-index: 4;
+}
+.donate_icon img {
+    position: absolute;
+    right: 0;
+    position: fixed;
+    top: 50%;
+    z-index: 4;
+    cursor: pointer;
+}
+.donate_tooltip {
+    background: #d4aad4;
+    padding: 25px;
+    color: #333333;
+    position: absolute;
+    position: fixed;
+    z-index: 4;
+    top: 50%;
+    right: 70px;
+    animation: blinker 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blinker {
+    from {
+        opacity: 1.5;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* DONATION */
+.dopnatetitle {
+    color: #483d8b;
+    font-family: Franklin Gothic Medium, Helvetica, Arial;
+    font-size: 50px;
+    text-align: center;
+}
+.font-red {
+    color: #cc5148;
+}
+.form_donate {
+    width: 50%;
+    margin: 0 auto;
+}
+.form_donate form {
+    border: 1px solid #c8c5c9;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: right;
+    background: #fefefe;
+}
+.form_donate form input {
+    border: 1px solid #c8c5c9;
+    border-radius: 3px;
+    width: 100%;
+}
+.text-left {
+    float: left;
+    text-align: left;
+}
+.done_btn, .backBtn {
+    text-align: center;
+}
+.gcash_qr {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.donatep {
+    font-size: 18px;
+    color: #333333;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.summary {
+    width: 50%;
+    margin: 0 auto;
+    border: 1px solid #c8c5c9;
+    padding: 25px;
+    border-radius: 8px;
+    margin-top: 25px;
+    background: #fefefe;
+}
+.sum_title h4 {
+    font-size: 18px;
+    color: #333333;
+}
+.stepbtn{
+    display: flex;
+    justify-content: center;
+}
+.gcash_instruct{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.gcash_instruct div{
+    align-self: center;
+}
+.scangif{
+    width: 400px;
+}
+/* footer */
+footer {
+    background: #4C004A;
+    color: #fefefe;
+    padding: 40px 0 40px;
+    margin-top: 147px;
+}
+.copyright {
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+}
+.social_meds {
+    margin: 25px 0 0 25px;
+}
+.social_meds ul {
+    text-align: center;
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.social_meds ul li {
+    list-style-type: none;
+}
+.social_meds ul li:last-child {
+    margin-left: 20px;
+}
+.footer_logo img {
+    width: 100px;
+}
+.footer_logo {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 15%;
+}
+
+/* REUEST FORM */
+.reqform {
+    width: 60%;
+    border: 1px solid #c8c5c9;
+    padding: 50px;
+    margin: 25px auto 0;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+}
+.form_style{
+    width: 600px;
+    border: none;
+}
+.reqtitle{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* POSTSPAGE */
+.posts_welcome{
+    margin-top: 25px;
+}
+.posts_welcome h3{
+    line-height: 2;
+}
