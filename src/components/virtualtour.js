@@ -5,13 +5,13 @@ import Header from './layout/header';
 import Footer from './layout/footer';
 
 // images
-import img1 from './../assets/images/img1.jpg';
-import img2 from './../assets/images/img2.jpg';
-import img3 from './../assets/images/img3.jpg';
-import img4 from './../assets/images/img4.jpg';
-import img5 from './../assets/images/img5.jpg';
-import img6 from './../assets/images/img6.jpg';
-import img7 from './../assets/images/img7.jpg';
+// import img1 from './../assets/images/img1.jpg';
+// import img2 from './../assets/images/img2.jpg';
+// import img3 from './../assets/images/img3.jpg';
+// import img4 from './../assets/images/img4.jpg';
+// import img5 from './../assets/images/img5.jpg';
+// import img6 from './../assets/images/img6.jpg';
+// import img7 from './../assets/images/img7.jpg';
 
 export default function VirtualTour() {
     return (
@@ -35,7 +35,7 @@ export default function VirtualTour() {
 
              {/* IMAGES */}
 
-             <div className="img_line1 mlr">
+             {/* <div className="img_line1 mlr">
                 <div className="images_row">
                     <div className="img_item">
                         <img src={img1} alt="virtualphoto" />
@@ -52,14 +52,14 @@ export default function VirtualTour() {
                     <div className="img_item">
                         <img src={img5} alt="virtualphoto" />
                     </div>
-                    {/* <div className="img_item">
+                    <div className="img_item">
                         <img src={img6} alt="virtualphoto"/>
                     </div>
                     <div className="img_item">
                         <img src={img7} alt="virtualphoto"/>
-                    </div> */}
+                    </div>
                 </div>
-            </div>
+            </div> */}
 
 
             {/* VIRTUAL TOUR DESCRIPTION */}

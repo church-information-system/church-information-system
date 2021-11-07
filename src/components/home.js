@@ -44,6 +44,9 @@ export default function Home(props) {
                                         <Link to="/request" className="nav-item">
                                             <a className="nav-link">REQUEST</a>
                                         </Link>
+                                        <Link to="/donate" className="nav-item">
+                                            <a className="nav-link">DONATE</a>
+                                        </Link>
                                     </ul>
                                 </div>
                             </div>

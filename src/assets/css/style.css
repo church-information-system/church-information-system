@@ -576,6 +576,9 @@ footer {
     font-weight: bold;
     font-size: 20px;
 }
+.viaemail input{
+    width: 45%;  
+}
 
 /* POSTSPAGE */
 .posts_welcome{

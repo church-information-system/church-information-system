@@ -5,6 +5,7 @@ import Header from './layout/header';
 import Footer from './layout/footer';
 
 import church from './../assets/images/church.png';
+import donateicon from './../assets/images/donateicon.png';
 
 export default function Posts(props) {
     const {posts} = props;
@@ -41,15 +42,16 @@ export default function Posts(props) {
                         </div>
                     </div>
                 ))}
-                <div className="viewAll">
-                    <Link to="/posts">
-                        <button type="button" className="yellow_btn">
-                            View All posts
-                        </button>
-                    </Link>
-                </div>
             </div>
 
+            {/* FLOATING DONATION ICON */}
+
+            <Link to="/donate" className="donate_icon">
+                <img src={donateicon} alt="donate here" />
+                <div className="donate_tooltip">
+                    Click here to donate
+                </div>
+            </Link>
 
             <Footer />
         </div>
