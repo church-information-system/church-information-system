@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 // PAGES
@@ -9,9 +9,7 @@ import nsols from "./../assets/images/nsols.jpg";
 // import footage1 from './../assets/images/footage1.mp4';
 import donateicon from "./../assets/images/donateicon.png";
 
-export default function Home(props) {
-  const { posts } = props;
-
+export default function Home({ posts }) {
   return (
     <div>
       {/* NAVBAR HERE */}
@@ -159,19 +157,21 @@ export default function Home(props) {
         <div className="post_main_head">
           <h3 className="post_header">Posts</h3>
         </div>
-        {posts.map((post) => (
-          <div className="card posts_card mb-3" key={post.id}>
-            <div className="card-header flex-space">
-              <div className="post_title">{post.title}</div>
-              <div className="post_date">{post.date}</div>
-            </div>
-            <div className="card-body">
-              <div className="mb-0">
-                <p>{post.content}</p>
+        {posts.map((post, index) =>
+          index < 3 ? (
+            <div className="card posts_card mb-3" key={post.id}>
+              <div className="card-header flex-space">
+                <div className="post_title">{post.title}</div>
+                <div className="post_date">{post.date}</div>
+              </div>
+              <div className="card-body">
+                <div className="mb-0">
+                  <p>{post.content}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ) : null
+        )}
         <div className="viewAll">
           <Link to="/posts">
             <button type="button" className="yellow_btn">
