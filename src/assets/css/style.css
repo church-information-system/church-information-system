@@ -12,6 +12,10 @@ html {
     background: #EAEAEA;
 }
 
+.margin{
+    margin: 0;
+}
+
 .mlr {
     margin-left: 60px !important;
     margin-right: 60px !important;
@@ -181,7 +185,7 @@ header {
 .posts_card{
     box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
     color: #333333!important;
-    width: 60%;
+    width: 90%;
 }
 .flex-space{
     display: flex;
@@ -586,4 +590,22 @@ footer {
 }
 .posts_welcome h3{
     line-height: 2;
+}
+/* ANNOUNCEMENT */
+.events{
+    border: 1px solid #c8c5c9;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(100% - 150px);
+}
+.image_gallery{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.eventsItem img{
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    text-align: center;
 }

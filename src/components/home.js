@@ -1,17 +1,29 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa';
 
 // PAGES
 import Footer from './layout/footer';
 
 // IMAGES
 import nsols from './../assets/images/nsols.jpg';
-// import footage1 from './../assets/images/footage1.mp4';
+import footage1 from './../assets/images/footage1.mp4';
 import donateicon from './../assets/images/donateicon.png';
+import a from './../assets/images/eventchurch/a.jpg';
+import b from './../assets/images/eventchurch/b.jpg';
+import c from './../assets/images/eventchurch/c.jpg';
+import d from './../assets/images/eventchurch/d.jpg';
+import e from './../assets/images/eventchurch/e.jpg';
 
 
 export default function Home(props) {
     const {posts} = props;
+
+    const [gallery1, setGallery1] = useState([
+        { id: 1, img: a },
+        { id: 2, img: b },
+        { id: 3, img: c },
+    ])
   
     return (
         <div>
@@ -100,9 +112,8 @@ export default function Home(props) {
             <div className="row margin mt-5 mb-5 home_content">
                 <div className="col-lg-12 col-sm-12 content_vid">
                     <div className="video_div">
-                        video is here
-                        {/* <video src={footage1} width="1200px" height="700px" className="video" loop={true} autoPlay={true} muted={true}>
-                        </video> */}
+                        <video src={footage1} width="1200px" height="700px" className="video" loop={true} autoPlay={true} muted={true}>
+                        </video>
                     </div>
                     <div className="button_yellow">
                         <Link to="/virtualtour">
@@ -113,36 +124,68 @@ export default function Home(props) {
                     </div>
                 </div>
             </div>
-            {/* POSTS */}
-            <div className="posts margin padding">
-                <div className="post_main_head">
-                    <h3 className="post_header">Posts</h3>
-                </div>
-                {posts.map((post) => (
-                    <div className="card posts_card mb-3" key={post.id}>
-                        <div className="card-header flex-space">
-                            <div className="post_title">
-                                {post.title}
-                            </div>
-                            <div className="post_date">
-                                {post.date}
-                            </div>
-                        </div>
-                        <div className="card-body">
-                            <div className="mb-0">
-                                <p>{post.body}</p>
-                            </div>
-                        </div>
+
+            <div className="row margin">
+                 {/* POSTS */}
+                <div className="col-lg-8 col-md-8 col-sm-12 posts margin padding">
+                    <div className="post_main_head">
+                        <h3 className="post_header">Posts</h3>
                     </div>
-                ))}
-                <div className="viewAll">
-                    <Link to="/posts">
-                        <button type="button" className="yellow_btn">
-                            View All posts
-                        </button>
-                    </Link>
+                    {posts.map((post) => (
+                        <div className="card posts_card mb-3" key={post.id}>
+                            <div className="card-header flex-space">
+                                <div className="post_title">
+                                    {post.title}
+                                </div>
+                                <div className="post_date">
+                                    {post.date}
+                                </div>
+                            </div>
+                            <div className="card-body">
+                                <div className="mb-0">
+                                    <p>{post.body}</p>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                    <div className="viewAll">
+                        <Link to="/posts">
+                            <button type="button" className="yellow_btn">
+                                View All posts
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+
+                {/* ANNOUNCEMENTS */}
+                <div className="col-lg-4 col-md-4 col-sm-12">
+                    <h3>Events</h3>
+                    <div className="events">
+                        {gallery1.map((gal) => (
+                           <div className="image_gallery" key={gal.id}>
+                           <a href={gal.img}>
+                               <div className="image">
+                                   <img src={gal.img} className="img-fluid rounded image__img" />
+                                   <div className="image__overlay image__overlay">
+                                       <div className="zoomin">
+                                           <FaSearch className="search_bg" />
+                                       </div>
+                                   </div>
+                               </div>
+                           </a>
+                       </div>
+                        ))}
+                         <div className="viewAll">
+                        <Link to="/events">
+                            <button type="button" className="yellow_btn">
+                                View More
+                            </button>
+                        </Link>
+                    </div>
+                    </div>
                 </div>
             </div>
+           
 
 
             {/* FLOATING DONATION ICON */}

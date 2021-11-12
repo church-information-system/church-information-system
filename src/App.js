@@ -18,12 +18,14 @@ import RequestPage from './components/request';
 import Posts from './components/posts';
 
 function App() {
+  // Posts
   const [posts, setPosts] = useState([
     { id: 1, title: "Post #1", body: "This is just a sample post for the National Shrine of Our Lady of Sorrows. There's nothing much in it. Just a sample post for the posts section of the home page", date: "April 4, 2021" },
     { id: 2, title: "Post #2", body: "This is just a sample post for the National Shrine of Our Lady of Sorrows. There's nothing much in it. Just a sample post for the posts section of the home page", date: "April 4, 2021" },
     { id: 3, title: "Post #3", body: "This is just a sample post for the National Shrine of Our Lady of Sorrows. There's nothing much in it. Just a sample post for the posts section of the home page", date: "April 4, 2021" },
     { id: 4, title: "Post #5", body: "This is just a sample post for the National Shrine of Our Lady of Sorrows. There's nothing much in it. Just a sample post for the posts section of the home page", date: "April 4, 2021" },
 ])
+
 
   return (
    <Router>
