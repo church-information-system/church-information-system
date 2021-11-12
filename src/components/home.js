@@ -7,13 +7,11 @@ import Footer from './layout/footer';
 
 // IMAGES
 import nsols from './../assets/images/nsols.jpg';
-import footage1 from './../assets/images/footage1.mp4';
+// import footage1 from './../assets/images/footage1.mp4';
 import donateicon from './../assets/images/donateicon.png';
 import a from './../assets/images/eventchurch/a.jpg';
 import b from './../assets/images/eventchurch/b.jpg';
 import c from './../assets/images/eventchurch/c.jpg';
-import d from './../assets/images/eventchurch/d.jpg';
-import e from './../assets/images/eventchurch/e.jpg';
 
 
 export default function Home(props) {
@@ -112,8 +110,8 @@ export default function Home(props) {
             <div className="row margin mt-5 mb-5 home_content">
                 <div className="col-lg-12 col-sm-12 content_vid">
                     <div className="video_div">
-                        <video src={footage1} width="1200px" height="700px" className="video" loop={true} autoPlay={true} muted={true}>
-                        </video>
+                        {/* <video src={footage1} width="1200px" height="700px" className="video" loop={true} autoPlay={true} muted={true}>
+                        </video> */}
                     </div>
                     <div className="button_yellow">
                         <Link to="/virtualtour">
