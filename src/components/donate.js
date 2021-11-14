@@ -61,16 +61,16 @@ export default function Donate() {
                         <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
                             <input type="text" placeholder="City*" required />
                         </div>
-                        <div className="col-lg-6 col-md-6 col-sm-12">
-                            <input type="text" placeholder="Postcode*" required />
-                        </div>
-                    </div>
-                    <div className="row mb-4">
                         <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
                             <input type="text" placeholder="Country" required />
                         </div>
+                    </div>
+                    <div className="row mb-4">
                         <div className="col-lg-6 col-md-6 col-sm-12">
                             <input type="email" placeholder="Email" required />
+                        </div>
+                        <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
+                            <input type="date" placeholder="Date of Birth*" required />
                         </div>
                     </div>
                     <div className="row mb-4">
@@ -81,9 +81,7 @@ export default function Donate() {
                                 <option value="2">Female</option>
                             </select>
                         </div>
-                        <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
-                            <input type="date" placeholder="Date of Birth*" required />
-                        </div>
+                       
                     </div>
                     <div className="row mb-4">
                         <div className="col-lg-6 col-md-6 col-sm-12 mb-3">

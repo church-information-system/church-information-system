@@ -1,9 +1,15 @@
 @media (max-width: 1024px) {
     .video {
-        width: 450px;
+        width: 900px;
     }
     .form_donate {
         width: 65%;
+    }
+    .events{
+        width: 100%;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+        font-size: 16px;
     }
 }
 @media (max-width: 768px) {
@@ -18,7 +24,7 @@
     }
     .navbar {
         position: absolute;
-        background: #800080;
+        background: #4C004A;
         text-align: center;
         z-index: 3;
         right: 0;
@@ -44,6 +50,37 @@
     .form_donate {
         width: 90%;
     }
+    .video{
+        width: 700px;
+        height: 450px;
+    }
+    .padding{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .reqform{
+        width: 90%;
+        padding: 25px;
+    }
+    .cont_title{
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    .cont_par{
+        text-align: center;
+    }
+    .cont_par p{
+        margin: 0 auto;
+    }
+    .bible_verse{
+        margin-bottom: 20px;
+    }
+    .posts_card{
+        width: 100%;
+    }
+    .events{
+        padding: 10px;
+    }
 }
 @media (max-width: 500px) {
     .navbar {
@@ -52,18 +89,52 @@
     }
     .video {
         width: 400px;
+        height: 200px;
     }
     .banner_text {
         left: 30px;
+        padding: 5px;
     }
     .banner_text p {
         font-size: 25px;
+        margin-bottom: 0;
     }
     .donation_title {
         font-size: 30px;
     }
     .form_donate form input {
         width: 325px;
+    }
+    .cont_par p{
+        width: 100%;
+    }
+    .posts_card{
+        width: 100%;
+    }
+    .footer_logo{
+        width: 45%;
+    }
+    .social_medS{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .social_meds ul{
+        width: 20%;
+        padding-left: 0;
+        margin: 0 auto;
+    }
+    .bible_verse{
+        margin-bottom: 20px;
+    }
+    .about_title h2{
+        left: 40%;
+    }
+    .viaemail input{
+        width: 100%;
+    }
+    .form-control{
+        font-size: 14px;
     }
 }
 @media (max-width: 400px) {
@@ -73,6 +144,21 @@
     .form_donate form input {
         width: 300px;
     }
+    .banner_text p{
+        font-size: 23px;
+    }
+    .banner_btn{
+        left: 20px;
+    }
+    .banner_text{
+        left: 15px;
+    }
+    .mass_sched{
+        font-size: 16px;
+    }
+    .yellow_btn{
+        font-size: 16px;
+    }
 }
 @media (max-width: 350px) {
     .video {
@@ -80,5 +166,14 @@
     }
     .form_donate form input {
         width: 250px;
+    }
+    .banner_text{
+        left: 0;
+    }
+    .banner_text p{
+        font-size: 20px;
+    }
+    .banner_btn{
+        width: 280px;
     }
 }

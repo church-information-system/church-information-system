@@ -38,6 +38,7 @@ function App() {
   const [posts, setPosts] = useState([]);
   useEffect(async () => setPosts(await fetchPosts()), []);
 
+
   return (
     <Router>
       <Switch>

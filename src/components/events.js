@@ -49,25 +49,19 @@ export default function Events() {
             <Header />
             {/* MASS SCHED */}
             <MassSched />
-
-
             <div className="lightgallery_main mt-5 mb-5">
                 <h4 className="text-center">Events</h4>
                 <h5 className="text-center">Canonical Coronation of Mahal Na Birheng Dolorosa</h5>
+               
                 <SimpleReactLightbox>
                     <SRLWrapper>
                         <div className="row center_flex">
                             {gallery1.map((gal1) => (
                                 <div className="col-lg-4 col-md-4 col-sm-12 mb-3">
-                                    <div className="image_gallery" key={gal1.id}>
+                                    <div className="image_gallery eventsItem" key={gal1.id}>
                                         <a href={gal1.img}>
                                             <div className="image">
                                                 <img src={gal1.img} className="img-fluid rounded image__img" />
-                                                <div className="image__overlay image__overlay">
-                                                    <div className="zoomin">
-                                                        <FaSearch className="search_bg" />
-                                                    </div>
-                                                </div>
                                             </div>
                                         </a>
                                     </div>
@@ -76,6 +70,7 @@ export default function Events() {
                         </div>
                     </SRLWrapper>
                 </SimpleReactLightbox>
+                
 
             </div>
 
