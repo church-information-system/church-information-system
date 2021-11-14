@@ -20,6 +20,29 @@ html {
     margin-left: 60px !important;
     margin-right: 60px !important;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #875586; 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #875586; 
+  }
+
 header {
     background: #4C004A;
     padding: 10px 0;
@@ -148,6 +171,9 @@ header {
     font-weight: 400;
     letter-spacing: 1px;
     width: 80%;
+}
+.home_posts{
+    padding: 2rem;
 }
 .home_content {
     margin-bottom: 50px;
@@ -312,34 +338,45 @@ header {
     color: #361d85;
 }
 .virtualtour {
-    width: 80%;
-    padding-left: 60px;
-    margin: 0 auto;
+    width: 100%;
 }
 .virtual_desc {
-    width: 100%;
-    margin: 0 auto;
+    width: 80%;
+    margin: 20px auto 0;
     text-align: center;
 }
-.img_item {
-    min-width: 19%;
-    max-width: 19%;
-    min-height: 200px;
-    max-height: 200px;
+.img_line{
+    height: 800px;
+    overflow-y: scroll;
 }
-.images_row{
-    display: flex;
-    justify-content: space-between;
+.img_item{
+    margin-bottom: 20px;
 }
 .img_item img{
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 200px;
-    max-height: 200px;
+    width: 95%;
+    height: 250px;
     object-fit: cover;
-    background-position-y: center;
 }
-
+.img_item:last-child{
+    margin-bottom: 0;
+}
+.panorama{
+    margin-top: 20px;
+    display: flex;
+    overflow-y: scroll;
+    padding: 20px;
+}
+.panorama_item{
+    margin-right: 20px;
+}
+.panorama_item:last-child{
+    margin-right: 0;
+}
+.panorama_item img{
+    object-fit: cover; 
+    width: 500px;
+    height: 200px;
+}
 
 /*HOVER*/
 .carousel-control-prev,
@@ -364,6 +401,7 @@ header {
 }
 .image {
     position: relative;
+    margin-bottom: 20px;
 }
 
 .image__overlay {
@@ -546,12 +584,10 @@ footer {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    padding-left: 0;
 }
 .social_meds ul li {
     list-style-type: none;
-}
-.social_meds ul li:last-child {
-    margin-left: 20px;
 }
 .footer_logo img {
     width: 100px;
@@ -596,9 +632,8 @@ footer {
     border: 1px solid #c8c5c9;
     border-radius: 5px;
     padding: 20px;
-    width: calc(100% - 150px);
 }
-.image_gallery{
+.eventsItem{
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
