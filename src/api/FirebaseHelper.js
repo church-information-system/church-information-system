@@ -1,4 +1,4 @@
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 import { firestore } from "../App";
 
 export async function fetchPosts() {
@@ -9,7 +9,17 @@ export async function fetchPosts() {
     let data = doc.data();
     data["id"] = doc.id;
     datas.push(data);
-    console.log(data);
   });
   return datas;
+}
+
+export async function submitDonation(record) {
+  let success = false;
+  try {
+    await addDoc(collection(firestore, "donation"), record);
+    success = true;
+  } catch (e) {
+    success = false;
+  }
+  return success;
 }
