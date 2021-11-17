@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Stepper } from "react-form-stepper";
+import { useHistory } from "react-router-dom";
 
 // PAGES
 import Header from "./layout/header";
@@ -10,10 +10,15 @@ import Footer from "./layout/footer";
 import qrcode from "./../assets/images/qrcode.png";
 import scan from "./../assets/images/scan.gif";
 import { customAlert, inputGetter } from "../helpers";
+import { FaArrowAltCircleDown } from "react-icons/fa";
+import { submitDonation } from "../api/FirebaseHelper";
+import loading from "../assets/images/loading.gif";
+import Swal from "sweetalert2";
 
 export default function Donate() {
   const [step, setStep] = useState(0);
   const [userData, _] = useState({});
+  const history = useHistory();
 
   return (
     <div>
@@ -295,11 +300,29 @@ export default function Donate() {
             >
               Previous Step
             </button>
-            {/* <Link to="/donedonate"> */}
-            <button type="button" className="btn btn-primary mlr">
+            <button
+              type="button"
+              className="btn btn-primary mlr"
+              onClick={async () => {
+                Swal.fire({
+                  title: "Submitting",
+                  html:
+                    `<img src="${loading}"/>` +
+                    '<div id="invalidAge" class="error-text"> </div>',
+                  allowOutsideClick: false,
+                });
+                if (await submitDonation(userData)) {
+                  customAlert("Your Donation has been sent!", "success");
+                  history.push("/donedonate");
+                } else
+                  customAlert(
+                    "Sorry, We can't process your donation at the moment",
+                    "error"
+                  );
+              }}
+            >
               Next Step
             </button>
-            {/* </Link> */}
           </div>
         </div>
       )}
