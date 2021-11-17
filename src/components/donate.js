@@ -257,31 +257,24 @@ export default function Donate() {
             <div className="details">
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">Name</div>
-                <div className="col-lg-6 col-md-6 col-sm-12">Sample Name</div>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                  {userData["firstName"]}, {userData["lastName"]}
+                </div>
               </div>
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">Address</div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
-                  Sample Address
+                  {userData["city"]}, {userData["address"]}
                 </div>
               </div>
-              <div className="row">
-                <div className="col-lg-6 col-md-6 col-sm-12">Date of Birth</div>
-                <div className="col-lg-6 col-md-6 col-sm-12">
-                  Sample birthday
-                </div>
-              </div>
-            </div>
-            <div className="sum_title">
-              <h4>Payment Details</h4>
             </div>
             <div className="details">
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">
-                  GCash Account Number
+                  GCash Account Number{" "}
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
-                  Sample GCash Account Number
+                  {userData["gcashNumber"]}
                 </div>
               </div>
               <div className="row">
