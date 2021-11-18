@@ -23,3 +23,15 @@ export async function submitDonation(record) {
   }
   return success;
 }
+
+export async function submitRequest(record) {
+  // this isn't DRY but... i couldn't care less
+  let success = false;
+  try {
+    await addDoc(collection(firestore, "requests"), record);
+    success = true;
+  } catch (e) {
+    success = false;
+  }
+  return success;
+}

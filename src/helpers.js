@@ -8,8 +8,8 @@ export function getById(id) {
   return document.getElementById(id);
 }
 
-export async function customAlert(message, icon) {
-  await Swal.fire({
+export function customAlert(message, icon) {
+  Swal.fire({
     title: message,
     icon: icon,
   });

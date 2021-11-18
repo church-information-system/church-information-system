@@ -122,9 +122,11 @@ export default function Donate() {
                     (userData["gender"] = value.target.value)
                   }
                 >
-                  <option selected>Gender</option>
-                  <option value="1">Male</option>
-                  <option value="2">Female</option>
+                  <option defaultValue value="">
+                    Gender
+                  </option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
                 </select>
               </div>
             </div>
@@ -306,10 +308,9 @@ export default function Donate() {
               onClick={async () => {
                 Swal.fire({
                   title: "Submitting",
-                  html:
-                    `<img src="${loading}"/>` +
-                    '<div id="invalidAge" class="error-text"> </div>',
+                  html: `<img src="${loading}"/>`,
                   allowOutsideClick: false,
+                  showConfirmButton: false,
                 });
                 if (await submitDonation(userData)) {
                   customAlert("Your Donation has been sent!", "success");
