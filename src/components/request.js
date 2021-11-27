@@ -102,7 +102,7 @@ export default function RequestPage() {
               </div>
             )}
           </div>
-          <button
+          <div
             className="btn yellow_btn mt-5"
             onClick={async () => {
               let hasInvalid = false;
@@ -192,7 +192,7 @@ export default function RequestPage() {
             }}
           >
             Submit
-          </button>
+          </div>
         </div>
       </div>
 
