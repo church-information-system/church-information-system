@@ -15,6 +15,7 @@ export async function fetchPosts() {
 
 export async function submitDonation(record) {
   let success = false;
+  record["dateDocumentAdded"] = new Date();
   try {
     await addDoc(collection(firestore, "donation"), record);
     success = true;
@@ -26,6 +27,7 @@ export async function submitDonation(record) {
 
 export async function submitRequest(record) {
   // this isn't DRY but... i couldn't care less
+  record["dateDocumentAdded"] = new Date();
   let success = false;
   try {
     await addDoc(collection(firestore, "requests"), record);
