@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaSearch, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
@@ -15,6 +15,7 @@ import Footer from './layout/footer';
 // IMAGES
 
 import donateicon from './../assets/images/donateicon.png';
+import church from "./../assets/images/church.png";
 
 import a from './../assets/images/eventchurch/a.jpg';
 import b from './../assets/images/eventchurch/b.jpg';
@@ -28,7 +29,8 @@ import i from './../assets/images/eventchurch/i.jpg';
 import j from './../assets/images/eventchurch/j.jpg';
 
 
-export default function Events() {
+export default function Events(props) {
+    const { posts } = props;
 
     const [gallery1, setGallery1] = useState([
         { id: 1, img: a },
@@ -47,8 +49,8 @@ export default function Events() {
         <div>
             {/* NAVBAR HERE */}
             <Header />
-            {/* MASS SCHED */}
-            <MassSched />
+
+
             <div className="lightgallery_main mt-5 mb-5">
                 <h4 className="text-center">Events</h4>
                 <h5 className="text-center">Canonical Coronation of Mahal Na Birheng Dolorosa</h5>

@@ -98,7 +98,7 @@ export default function RequestPage() {
             )}
             {show === "walkin" && (
               <div className="walkin mt-5">
-                Please see us at (ADDRESS OF THE CHURCH)
+                Please see us at <span style={{color: '#4C004A', fontWeight: "bold"}}>Brgy. Silanganan, Dolores, Quezon</span>
               </div>
             )}
           </div>
