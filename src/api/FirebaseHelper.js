@@ -2,8 +2,7 @@ import { collection, getDocs, addDoc } from "firebase/firestore";
 import { firestore } from "../App";
 
 export async function fetchPosts() {
-  console.log("fetching posts");
-  const querySnapshot = await getDocs(collection(firestore, "post"));
+  const querySnapshot = await getDocs(collection(firestore, "events"));
   let datas = [];
   querySnapshot.forEach((doc) => {
     let data = doc.data();
