@@ -58,7 +58,7 @@ export default function Home(props) {
                       <a className="nav-link">ABOUT US</a>
                     </Link>
                     <Link to="/posts" className="nav-item">
-                      <a className="nav-link">POSTS</a>
+                      <a className="nav-link">EVENTS</a>
                     </Link>
                     <Link to="/request" className="nav-item">
                       <a className="nav-link">REQUEST</a>

@@ -36,7 +36,7 @@ export default function Header() {
                                         <a className="nav-link">ABOUT US</a>
                                     </Link>
                                     <Link to="/posts" className="nav-item">
-                                        <a className="nav-link">POSTS</a>
+                                        <a className="nav-link">EVENTS</a>
                                     </Link>
                                     <Link to="/virtualtour" className="nav-item">
                                         <a className="nav-link">VIRTUAL TOUR</a>
