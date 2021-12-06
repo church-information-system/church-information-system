@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // PAGES
 import Header from "./layout/header";
@@ -11,7 +11,11 @@ import { useHistory } from "react-router";
 
 export default function RequestPage() {
   const [show, setShow] = useState("emailadd");
+  const [refresh, setRefresh] = useState(0);
+
   const history = useHistory();
+
+  useEffect(() => setRefresh(1), []);
 
   return (
     <div className="requestpage">
@@ -39,13 +43,45 @@ export default function RequestPage() {
             <label className="form-label">Address</label>
             <input type="text" className="form-control" id="address" />
           </div>
-          <select className="form-select" id="requested">
-            <option defaultValue value="">
+          <select
+            className="form-select"
+            id="requested"
+            onChange={() => setRefresh((value) => value + 1)}
+          >
+            <option defaultValue value="none">
               Please select form you want to request
             </option>
             <option value="Marriage Certificate">Marriage Certificate</option>
             <option value="Death Certificate">Death Certificate</option>
           </select>
+          {refresh > 0 ? (
+            inputGetter("requested") === "Marriage Certificate" ? (
+              <div>
+                <div className="mb-3">
+                  <label className="form-label">Wife's name</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="husbandName"
+                  />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Husband's name</label>
+                  <input type="text" className="form-control" id="wifeName" />
+                </div>
+              </div>
+            ) : inputGetter("requested") === "Death Certificate" ? (
+              <div>
+                <label className="form-label">Name of the Deceased</label>
+                <input type="text" className="form-control" id="deceasedName" />
+              </div>
+            ) : (
+              ""
+            )
+          ) : (
+            ""
+          )}
+
           <div className="mt-3">
             <p>Please select how you want to get the form you requested</p>
             <div className="radio_select row">
@@ -98,7 +134,10 @@ export default function RequestPage() {
             )}
             {show === "walkin" && (
               <div className="walkin mt-5">
-                Please see us at <span style={{color: '#4C004A', fontWeight: "bold"}}>Brgy. Silanganan, Dolores, Quezon</span>
+                Please see us at{" "}
+                <span style={{ color: "#4C004A", fontWeight: "bold" }}>
+                  Brgy. Silanganan, Dolores, Quezon
+                </span>
               </div>
             )}
           </div>
@@ -137,6 +176,15 @@ export default function RequestPage() {
                   requestedDocument: requested,
                   requestMethod: requestMethod,
                 };
+
+                console.log(requested);
+                if (requested === "Marriage Certificate") {
+                  record["husbandName"] = inputGetter("husbandName");
+                  record["wifeName"] = inputGetter("husbandName");
+                }
+                if (requested === "Death Certificate") {
+                  record["fullname"] = inputGetter("deceasedName");
+                }
 
                 if (requestMethod === "Send via email") {
                   customAlert(
