@@ -627,6 +627,9 @@ footer {
 .posts_welcome h3{
     line-height: 2;
 }
+.post_img{
+    width: 100%;
+}
 /* ANNOUNCEMENT */
 .events{
     border: 1px solid #c8c5c9;
