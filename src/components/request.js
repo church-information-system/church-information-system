@@ -83,63 +83,15 @@ export default function RequestPage() {
           )}
 
           <div className="mt-3">
-            <p>Please select how you want to get the form you requested</p>
-            <div className="radio_select row">
-              <div className="col-lg-6 col-md-6 col-sm-12">
-                <input
-                  type="radio"
-                  name="radioform"
-                  onChange={(e) => {
-                    setShow("emailadd");
-                  }}
-                  defaultChecked={true}
-                  id="sendByEmail"
-                ></input>
-                <label className="form-label ml-2">
-                  To be sent in your email
-                </label>
-              </div>
-              <div className="col-lg-6 col-md-6 col-sm-12">
-                <input
-                  type="radio"
-                  name="radioform"
-                  onChange={(e) => {
-                    setShow("walkin");
-                  }}
-                  id="walkIn"
-                ></input>
-                <label className="form-label ml-2">
-                  Walk in to our local church
-                </label>
-              </div>
-            </div>
-
-            {show === "emailadd" && (
-              <div className="viaemail">
-                <label className="form-label">Email Address</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Email Address"
-                  id="emailAddress"
-                />
-                <label className="form-label">Email Address</label>
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Please confirm Email Address"
-                  id="emailAddress2"
-                />
-              </div>
-            )}
-            {show === "walkin" && (
-              <div className="walkin mt-5">
+          <div className="walkin">
+              <p>We received your request.</p>
                 Please see us at{" "}
-                <span style={{ color: "#4C004A", fontWeight: "bold" }}>
+                <span style={{ color: "#4C004A", fontWeight: "bold", fontSize: "20px" }}>
                   Brgy. Silanganan, Dolores, Quezon
                 </span>
+                {/* SCHEDULED DATE HERE */}
+                <p>on <span style={{ color: "#4C004A", fontWeight: "bold", fontSize: "20px" }}>December 25, 2021</span></p>
               </div>
-            )}
           </div>
           <div
             className="btn yellow_btn mt-5"
