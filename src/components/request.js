@@ -43,6 +43,10 @@ export default function RequestPage() {
             <label className="form-label">Address</label>
             <input type="text" className="form-control" id="address" />
           </div>
+          <div className="mb-3">
+            <label className="form-label">Email Address</label>
+            <input type="email" className="form-control" id="email" />
+          </div>
           <select
             className="form-select"
             id="requested"
@@ -85,12 +89,10 @@ export default function RequestPage() {
           <div className="mt-3">
           <div className="walkin">
               <p>We received your request.</p>
-                Please see us at{" "}
+                Please see us at the Office{" "}
                 <span style={{ color: "#4C004A", fontWeight: "bold", fontSize: "20px" }}>
-                  Brgy. Silanganan, Dolores, Quezon
+                National Shrine of Our Lady of Sorrows in Brgy. Silanganan, Dolores, Quezon
                 </span>
-                {/* SCHEDULED DATE HERE */}
-                <p>on <span style={{ color: "#4C004A", fontWeight: "bold", fontSize: "20px" }}>December 25, 2021</span></p>
               </div>
           </div>
           <div
