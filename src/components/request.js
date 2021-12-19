@@ -86,15 +86,6 @@ export default function RequestPage() {
             ""
           )}
 
-          <div className="mt-3">
-          <div className="walkin">
-              <p>We received your request.</p>
-                Please see us at the Office{" "}
-                <span style={{ color: "#4C004A", fontWeight: "bold", fontSize: "20px" }}>
-                National Shrine of Our Lady of Sorrows in Brgy. Silanganan, Dolores, Quezon
-                </span>
-              </div>
-          </div>
           <div
             className="btn yellow_btn mt-5"
             onClick={async () => {
@@ -111,9 +102,7 @@ export default function RequestPage() {
               let lastName = inputGetter("lastName");
               let address = inputGetter("address");
               let requested = inputGetter("requested");
-              let requestMethod = getById("sendByEmail").checked
-                ? "Send via email"
-                : "Walk In";
+              let email = inputGetter("email");
 
               if (requested.trim().length === 0) {
                 getById("requested").style.border = "1px solid red";
@@ -128,67 +117,32 @@ export default function RequestPage() {
                   lastName: lastName,
                   address: address,
                   requestedDocument: requested,
-                  requestMethod: requestMethod,
+                  emailAddress: email,
                 };
 
-                console.log(requested);
                 if (requested === "Marriage Certificate") {
                   record["husbandName"] = inputGetter("husbandName");
                   record["wifeName"] = inputGetter("husbandName");
                 }
                 if (requested === "Death Certificate") {
-                  record["fullname"] = inputGetter("deceasedName");
+                  record["nameOfDeceased"] = inputGetter("deceasedName");
                 }
 
-                if (requestMethod === "Send via email") {
+                Swal.fire({
+                  title: "Submitting",
+                  showConfirmButton: false,
+                  html: `<img src="${loading}"/>`,
+                  allowOutsideClick: false,
+                });
+
+                if (await submitRequest(record)) {
                   customAlert(
-                    "Emails doesn't match, please check your input",
-                    "error"
+                    "We've sent your request, please see us at the Office to pick up your documents",
+                    "success"
                   );
-
-                  let email1 = inputGetter("emailAddress");
-                  let email2 = inputGetter("emailAddress2");
-
-                  if (email1 === email2) {
-                    record["emailAddress"] = email1;
-                    Swal.fire({
-                      title: "Submitting",
-                      showConfirmButton: false,
-                      html: `<img src="${loading}"/>`,
-                      allowOutsideClick: false,
-                    });
-                    if (await submitRequest(record)) {
-                      customAlert(
-                        "We've sent your request, please wait and we will email your document shortly",
-                        "success"
-                      );
-                      history.push("/");
-                    } else {
-                      customAlert(
-                        "Something went wrong please try again",
-                        "error"
-                      );
-                    }
-                  }
+                  history.push("/");
                 } else {
-                  Swal.fire({
-                    title: "Submitting",
-                    showConfirmButton: false,
-                    html: `<img src="${loading}"/>`,
-                    allowOutsideClick: false,
-                  });
-                  if (await submitRequest(record)) {
-                    customAlert(
-                      "We've submitted your request, please drop by at our local chuch to pick up your documents",
-                      "success"
-                    );
-                    history.push("/");
-                  } else {
-                    customAlert(
-                      "Something went wrong please try again",
-                      "error"
-                    );
-                  }
+                  customAlert("Something went wrong please try again", "error");
                 }
               }
             }}
