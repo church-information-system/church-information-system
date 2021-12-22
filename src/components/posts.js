@@ -52,11 +52,13 @@ export default function Posts(props) {
 
       {/* POSTS */}
       <div className="row mlr posts margin padding">
-        <div className="col-lg-4 col-md-4 col-sm-12">
+        
           {posts.map((post) => (
+            <div className="col-lg-4 col-md-4 col-sm-12">
             <Post post={post} />
+            </div>
           ))}
-        </div>
+        
       </div>
 
       <div className="lightgallery_main mt-5 mb-5">
