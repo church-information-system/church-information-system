@@ -1,5 +1,6 @@
 import { collection, getDocs, addDoc } from "firebase/firestore";
-import { firestore } from "../App";
+import { firestore, storage } from "../App";
+import { ref, getDownloadURL, uploadBytes } from "firebase/storage";
 
 export async function fetchPosts() {
   const querySnapshot = await getDocs(collection(firestore, "events"));
@@ -34,6 +35,14 @@ export async function submitDonation(record) {
     success = false;
   }
   return success;
+}
+
+export async function requestImage(id) {
+  try {
+    return await getDownloadURL(ref(storage, `events/${id}.jpg`));
+  } catch (e) {
+    return null;
+  }
 }
 
 export async function submitRequest(record) {

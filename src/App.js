@@ -21,6 +21,7 @@ import Posts from "./components/posts";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { fetchPosts } from "./api/FirebaseHelper";
+import { getStorage } from "@firebase/storage";
 
 initializeApp({
   apiKey: "AIzaSyCDZTLgld2lnDQfqwfWekAu-kq3uXEYKAk",
@@ -33,6 +34,7 @@ initializeApp({
 });
 
 export const firestore = getFirestore();
+export const storage = getStorage();
 
 function App() {
   const [posts, setPosts] = useState([]);
