@@ -73,7 +73,7 @@ export default function VirtualTour() {
                     <div className="virtualtour">
                         <video
                             src={virtual}
-                            width="1200px"
+                            width="100%"
                             height="700px"
                             className="video"
                             loop={true}
