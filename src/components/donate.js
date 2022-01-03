@@ -47,26 +47,14 @@ export default function Donate() {
             <h4>Donor Details</h4>
           </div>
           <form>
-            <div className="row mb-3">
-              <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
+            <div className="row mb-4">
+              <div className="col-lg-12">
                 <input
                   type="text"
-                  placeholder="First Name*"
-                  required
-                  value={userData["firstName"]}
+                  placeholder="Full Name"
+                  value={userData["fullName"]}
                   onChange={(value) =>
-                    (userData["firstName"] = value.target.value)
-                  }
-                />
-              </div>
-              <div className="col-lg-6 col-md-6 col-sm-12">
-                <input
-                  type="text"
-                  placeholder="Last Name*"
-                  required
-                  value={userData["lastName"]}
-                  onChange={(value) =>
-                    (userData["lastName"] = value.target.value)
+                    (userData["fullName"] = value.target.value)
                   }
                 />
               </div>
@@ -265,7 +253,7 @@ export default function Donate() {
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">Name</div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
-                  {userData["firstName"]}, {userData["lastName"]}
+                  {userData["fullName"]}
                 </div>
               </div>
               <div className="row">
