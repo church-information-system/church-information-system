@@ -63,15 +63,15 @@ export default function RequestPage() {
               <div>
                 <div className="mb-3">
                   <label className="form-label">Wife's name</label>
+                  <input type="text" className="form-control" id="wifeName" />
+                </div>
+                <div className="mb-3">
+                  <label className="form-label">Husband's name</label>
                   <input
                     type="text"
                     className="form-control"
                     id="husbandName"
                   />
-                </div>
-                <div className="mb-3">
-                  <label className="form-label">Husband's name</label>
-                  <input type="text" className="form-control" id="wifeName" />
                 </div>
               </div>
             ) : inputGetter("requested") === "Death Certificate" ? (
@@ -122,7 +122,7 @@ export default function RequestPage() {
 
                 if (requested === "Marriage Certificate") {
                   record["husbandName"] = inputGetter("husbandName");
-                  record["wifeName"] = inputGetter("husbandName");
+                  record["wifeName"] = inputGetter("wifeName");
                 }
                 if (requested === "Death Certificate") {
                   record["nameOfDeceased"] = inputGetter("deceasedName");
