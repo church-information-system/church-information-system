@@ -57,9 +57,10 @@ export default function Donate() {
                     (userData["fullName"] = value.target.value)
                   }
                 />
+                <label style={{color: "red"}}>Optional *</label>
               </div>
             </div>
-            <div className="row mb-4">
+            {/* <div className="row mb-4">
               <div className="col-lg-12">
                 <input
                   type="text"
@@ -71,8 +72,8 @@ export default function Donate() {
                   }
                 />
               </div>
-            </div>
-            <div className="row mb-3">
+            </div> */}
+            {/* <div className="row mb-3">
               <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
                 <input
                   type="text"
@@ -92,7 +93,7 @@ export default function Donate() {
                   }
                 />
               </div>
-            </div>
+            </div> */}
             <div className="row mb-4">
               <div className="col-lg-6 col-md-6 col-sm-12">
                 <input
@@ -102,7 +103,7 @@ export default function Donate() {
                   onChange={(value) => (userData["email"] = value.target.value)}
                 />
               </div>
-              <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
+              {/* <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
                 <select
                   className="form-select"
                   value={userData["gender"]}
@@ -116,10 +117,10 @@ export default function Donate() {
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                 </select>
-              </div>
+              </div> */}
             </div>
             <div className="row mb-4">
-              <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
+              {/* <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
                 <input
                   type="tel"
                   id="phone"
@@ -132,7 +133,7 @@ export default function Donate() {
                     (userData["phoneNumber"] = value.target.value)
                   }
                 />
-              </div>
+              </div> */}
               <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
                 <input
                   type="tel"
@@ -148,7 +149,7 @@ export default function Donate() {
                 />
               </div>
             </div>
-            <div className="row mb-4">
+            {/* <div className="row mb-4">
               <div className="col-lg-12 mb-3">
                 <input
                   type="number"
@@ -160,7 +161,7 @@ export default function Donate() {
                   }
                 />
               </div>
-            </div>
+            </div> */}
           </form>
           <div className="done_btn mt-3">
             <button
