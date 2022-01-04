@@ -22,12 +22,6 @@ export default function RequestPage() {
       <Header />
 
       <div className="reqtitle text-center mt-5">Request</div>
-      <div className="page_intro text-center">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </p>
-      </div>
 
       <div className="request_form">
         <div className="reqform">
