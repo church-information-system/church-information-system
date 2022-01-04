@@ -257,12 +257,12 @@ export default function Donate() {
                   {userData["fullName"]}
                 </div>
               </div>
-              <div className="row">
+              {/* <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">Address</div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   {userData["city"]}, {userData["address"]}
                 </div>
-              </div>
+              </div> */}
             </div>
             <div className="details">
               <div className="row">
@@ -273,12 +273,12 @@ export default function Donate() {
                   {userData["gcashNumber"]}
                 </div>
               </div>
-              <div className="row">
+              {/* <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-12">AmountDonated</div>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   ₱ {userData["amount"]}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="done_btn stepbtn mt-3">
