@@ -95,7 +95,7 @@ export default function Donate() {
               </div>
             </div> */}
             <div className="row mb-4">
-              <div className="col-lg-6 col-md-6 col-sm-12">
+              <div className="col-lg-12 col-md-12 col-sm-12">
                 <input
                   type="email"
                   placeholder="Email"
@@ -134,7 +134,7 @@ export default function Donate() {
                   }
                 />
               </div> */}
-              <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
+              <div className="col-lg-12 col-md-12 col-sm-12 mb-3">
                 <input
                   type="tel"
                   id="phone"
