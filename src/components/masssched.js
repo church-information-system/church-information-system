@@ -9,9 +9,33 @@ import donateicon from "./../assets/images/donateicon.png";
 import ScheduleCard from "./schedule-card";
 import { fetchSchedules } from "../api/FirebaseHelper";
 
+export function toDateTime(secs) {
+  var t = new Date(1970, 0, 1);
+  t.setSeconds(secs);
+  return t;
+}
+
 export default function MassSched() {
   const [sched, setSched] = useState([]);
-  useEffect(async () => setSched(await fetchSchedules()), []);
+  useEffect(async () => {
+    let schedules = await fetchSchedules();
+    schedules.sort((a, b) => {
+      return (
+        toDateTime(
+          b.dateDocumentAdded.seconds !== undefined
+            ? b.dateDocumentAdded.seconds
+            : b.dateDocumentAdded._seconds
+        ) -
+        toDateTime(
+          a.dateDocumentAdded.seconds !== undefined
+            ? a.dateDocumentAdded.seconds
+            : a.dateDocumentAdded._seconds
+        )
+      );
+    });
+
+    setSched(schedules);
+  }, []);
 
   return (
     <div className="schedule_main mt-5 mb-5">
